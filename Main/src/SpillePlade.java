@@ -2,7 +2,7 @@ public abstract class SpillePlade {
     //Alle Felt-objekter defineres
     public Felt tower, crater, palaceGates, coldDesert, walledCity, monastery, blackCave, hutsInTheMountain, theWerewall, thePit, goldMine, fejlFelt;
 
-    //Constructor til SpillePlade
+    //Constructor til SpillePlade (Alt tekst er samlet her)
     public SpillePlade() {
         Felt tower = new Felt("Tower",250,"Du er landet på Tower og 250 kr. er tilføjet til din konto");
         Felt crater = new Felt("Crater",-100,"Du er landet på Crater og 100 kr. er trukket fra din konto");
@@ -13,7 +13,7 @@ public abstract class SpillePlade {
         Felt blackCave = new Felt("Black Cave",-70,"Du er landet på Black Cave og 70 kr. er trukket fra din konto");
         Felt hutsInTheMountain = new Felt("Huts In The Mountain",60,"Du er landet på Huts In The Mountain og 60 kr. er tilføjet til din konto");
         Felt theWerewall = new Felt("The Werewall",-80,"Du er landet på The Werewall og 80 kr. er tilføjet til din konto, men du får en ekstra tur!");
-        Felt thePit = new Felt("The Pit",-50,"Du er landet på The Pit og 50 kr. er Trukket fra din konto");
+        Felt thePit = new Felt("The Pit",-50,"Du er landet på The Pit og 50 kr. er trukket fra din konto");
         Felt goldMine = new Felt("Goldmine",650,"Du er landet på Goldmine og 650 kr. er tilføjet til din konto");
         Felt fejlFelt = new Felt("Fejl", 0,"øjenværdien svarer ikke til et felt");
     }
@@ -35,8 +35,4 @@ public abstract class SpillePlade {
             default -> fejlFelt;
         };
     }
-
-
-
-
 }
