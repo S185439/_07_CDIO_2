@@ -1,6 +1,8 @@
 public abstract class SpillePlade {
+    //Alle Felt-objekter defineres
     public Felt tower, crater, palaceGates, coldDesert, walledCity, monastery, blackCave, hutsInTheMountain, theWerewall, thePit, goldMine, fejlFelt;
 
+    //Constructor til SpillePlade
     public SpillePlade() {
         Felt tower = new Felt("Tower",250,"Du er landet på Tower og 250 kr. er tilføjet til din konto");
         Felt crater = new Felt("Crater",-100,"Du er landet på Crater og 100 kr. er trukket fra din konto");
@@ -16,6 +18,7 @@ public abstract class SpillePlade {
         Felt fejlFelt = new Felt("Fejl", 0,"øjenværdien svarer ikke til et felt");
     }
 
+    //Method der kalder et felt alt efter øjenværdien af terningen
     public Felt rykTilFelt(int oejenVaerdi) {
         return switch (oejenVaerdi) {
             case 2 -> tower;
