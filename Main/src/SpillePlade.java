@@ -20,19 +20,19 @@ public class SpillePlade {
 
     //Method der kalder et felt alt efter øjenværdien af terningen
     public Felt rykTilFelt(int oejenVaerdi) {
-        switch (oejenVaerdi) {
-            case 2: return tower;
-            case 3: return crater;
-            case 4: return palaceGates;
-            case 5: return coldDesert;
-            case 6: return walledCity;
-            case 7: return monastery;
-            case 8: return blackCave;
-            case 9: return hutsInTheMountain;
-            case 10: return theWerewall;
-            case 11: return thePit;
-            case 12: return goldMine;
-            default: return fejlFelt;
-        }
+        return switch (oejenVaerdi) {
+            case 2 -> tower;
+            case 3 -> crater;
+            case 4 -> palaceGates;
+            case 5 -> coldDesert;
+            case 6 -> walledCity;
+            case 7 -> monastery;
+            case 8 -> blackCave;
+            case 9 -> hutsInTheMountain;
+            case 10 -> theWerewall;
+            case 11 -> thePit;
+            case 12 -> goldMine;
+            default -> fejlFelt;
+        };
     }
 }

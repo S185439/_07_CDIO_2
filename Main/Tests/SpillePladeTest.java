@@ -13,5 +13,9 @@ class SpillePladeTest {
         assertEquals("Tower", f1.navn);
         f1 = sP.rykTilFelt(7);
         assertEquals(0, f1.transaktionsVaerdi);
+        f1 = sP.rykTilFelt(12);
+        assertEquals("Du er landet på Goldmine og 650 kr. er tilføjet til din konto", f1.outputTekst);
+        f1 = sP.rykTilFelt(26);
+        assertEquals("Fejl", f1.navn);
     }
 }
