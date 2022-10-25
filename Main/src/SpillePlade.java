@@ -1,4 +1,4 @@
-public abstract class SpillePlade {
+public class SpillePlade {
     //Alle Felt-objekter defineres
     public Felt tower, crater, palaceGates, coldDesert, walledCity, monastery, blackCave, hutsInTheMountain, theWerewall, thePit, goldMine, fejlFelt;
 

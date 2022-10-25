@@ -4,10 +4,10 @@ public class Felt {
     int transaktionsVaerdi;
 
     //Constructor for Felt
-    public Felt(String _navn, int _tVaerdi, String _outTekst) {
+    public Felt(String _navn, int _transaktionsVaerdi, String _outputTekst) {
         navn = _navn;
-        transaktionsVaerdi = _tVaerdi;
-        outputTekst = _outTekst;
+        transaktionsVaerdi = _transaktionsVaerdi;
+        outputTekst = _outputTekst;
     }
 
     // Getter og Setter for output-teksten
