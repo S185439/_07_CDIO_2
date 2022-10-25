@@ -1,8 +1,8 @@
 public class Raflebaeger {
 
-    Terning terning1;
-    Terning terning2;
-    int sumAfTerninger;
+    private Terning terning1;
+    private Terning terning2;
+    private int sumAfTerninger;
 
     /**
      * Constructor til et RafleBaeger, opretter 2 terninge object, og saetter sumAfTerninger til 0
