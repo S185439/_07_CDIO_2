@@ -1,5 +1,5 @@
 public class Spiller {
-    private String navn;
+    public String navn;
     public Konto Spillerkonto;
 
 

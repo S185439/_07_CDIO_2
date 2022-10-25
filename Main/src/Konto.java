@@ -7,11 +7,8 @@ public class Konto {
         penge = startVaerdi;
     }
 
-    public void plusPenge(int vaerdi) {
+    public void transaktion(int vaerdi) {
         penge = penge+vaerdi;
-    }
-    public void minusPenge(int vaerdi) {
-        penge = penge-vaerdi;
     }
 
     public int getPenge() {
