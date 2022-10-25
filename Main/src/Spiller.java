@@ -6,7 +6,7 @@ public class Spiller {
 //Constructor til Spiller
 public Spiller (String navn) {
     this.navn = navn;
-    Konto = new SpillerKonto();
+    Spillerkonto = new Konto();
 }
 
 // Getter og Setter for spillerens navn
