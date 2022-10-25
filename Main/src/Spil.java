@@ -6,9 +6,9 @@ public class Spil {
         // Alle objekter defineres
         SpillePlade sP = new SpillePlade();
 
-        Spiller spiller[] = new Spiller[2];
-        spiller[0].setSpillerNavn("Spiller 1");
-        spiller[1].setSpillerNavn("Spiller 2");
+        Spiller s1 = new Spiller("Spiller 1");
+        Spiller s2 = new Spiller("Spiller 2");
+        Spiller[] spiller = {s1, s2};
 
         Raflebaeger rB = new Raflebaeger();
         Scanner input = new Scanner(System.in);
@@ -34,23 +34,27 @@ public class Spil {
                 System.out.println(feltNu.outputTekst);
 
                 spiller[hvisTur].Spillerkonto.transaktion(feltNu.transaktionsVaerdi);
-                //Hvis spilleren er landet på Werewall (10), ændres turen ikke, så de får et ekstra slag
 
-                if (rB.getSumAfTerninger() != 10) { hvisTur = 2; }
 
                 //Så vises spillerens konto
-                System.out.println(spiller[hvisTur].navn + "du har nu " + spiller[hvisTur].Spillerkonto.getPenge() + " på din konto");
+                System.out.println(spiller[hvisTur].navn + " du har nu " + spiller[hvisTur].Spillerkonto.getPenge() + " på din konto");
+
 
                 //Hvis spillerens konto har 3000 kr. eller derover, så ender spillet
-                if (spiller[hvisTur].Spillerkonto.getPenge() <= 3000) {
+                if (spiller[hvisTur].Spillerkonto.getPenge() >= 3000) {
                     spilVundet = true;
+                } else {
+                    //Turen skiftes, medmindre spilleren er landet på Werewall (10) hvor turen ikke ændres, så de får et ekstra slag
+                    if (rB.getSumAfTerninger() != 10) {
+                        if (hvisTur == 0) { hvisTur = 1;} else { hvisTur = 0; }
+                    }
                 }
-
-
-
+                System.out.println();
             }
+        }
 
-
+        if (vent.equals("y")) {
+            System.out.println("Tillykke " + spiller[hvisTur].navn + " Du opnåede først 3000 kr. og har derfor vundet spillet");
         }
     }
 }
