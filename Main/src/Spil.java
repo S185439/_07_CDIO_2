@@ -23,14 +23,25 @@ public class Spil {
                 System.out.println(s1.navn + ", det er din tur til at slå");
                 System.out.println("Skriv y og tryk enter for at slå, ellers stopper spillet");
 
-                //vent er ser næste input og sørger for at det er korrekt (y)
+                //vent ser næste input og sørger for at det er korrekt (y)
                 vent = input.nextLine();
                 if (vent.equals("y")) {
                     rB.slaaAlleTerninger();
                     System.out.println("Du har slået " + rB.getSumAfTerninger());
                     feltNu = sP.rykTilFelt(rB.getSumAfTerninger());
                     System.out.println(feltNu.outputTekst);
+
                     s1.Spillerkonto.transaktion(feltNu.transaktionsVaerdi);
+                    //Hvis spilleren er landet på Werewall (10), ændres turen ikke, så de får et ekstra slag
+
+                    if (rB.getSumAfTerninger() != 10) { hvisTur = 2; }
+
+                    //Hvis spillerens konto har 3000 kr. eller derover, så ender spillet
+                    System.out.println("Du har nu " + s1.Spillerkonto.getPenge() + " på din konto");
+                    if (s1.Spillerkonto.getPenge() <= 3000) {
+                        spilVundet = true;
+                    }
+
                 }
             }
         }
