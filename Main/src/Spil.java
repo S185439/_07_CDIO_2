@@ -35,26 +35,23 @@ public class Spil {
 
                 spiller[hvisTur].Spillerkonto.transaktion(feltNu.transaktionsVaerdi);
 
-
                 //Så vises spillerens konto
                 System.out.println(spiller[hvisTur].navn + " du har nu " + spiller[hvisTur].Spillerkonto.getPenge() + " på din konto");
-
 
                 //Hvis spillerens konto har 3000 kr. eller derover, så ender spillet
                 if (spiller[hvisTur].Spillerkonto.getPenge() >= 3000) {
                     spilVundet = true;
+                    System.out.println("Tillykke " + spiller[hvisTur].navn + " Du opnåede først 3000 kr. og har derfor vundet spillet");
                 } else {
                     //Turen skiftes, medmindre spilleren er landet på Werewall (10) hvor turen ikke ændres, så de får et ekstra slag
                     if (rB.getSumAfTerninger() != 10) {
-                        if (hvisTur == 0) { hvisTur = 1;} else { hvisTur = 0; }
+                        if (hvisTur == 0) { hvisTur = 1; } else { hvisTur = 0; }
                     }
                 }
                 System.out.println();
             }
         }
 
-        if (vent.equals("y")) {
-            System.out.println("Tillykke " + spiller[hvisTur].navn + " Du opnåede først 3000 kr. og har derfor vundet spillet");
-        }
+
     }
 }
