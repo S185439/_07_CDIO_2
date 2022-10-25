@@ -7,7 +7,7 @@ class TerningTest {
 
     @Test
     void slaaTerninger() {
-        for (int t = 0; t < 5; t++) {
+        for (int t = 0; t < 10; t++) {
             int tempOejenVaerdi = terning.slaaTerning();
             assertTrue(tempOejenVaerdi >= 1 && tempOejenVaerdi <= 6);
         }
