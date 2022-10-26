@@ -1,21 +1,21 @@
 public class SpillePlade {
     //Alle Felt-objekter defineres
     public Felt tower, crater, palaceGates, coldDesert, walledCity, monastery, blackCave, hutsInTheMountain, theWerewall, thePit, goldMine, fejlFelt;
-
+    private SpilTekst Tekst = new SpilTekst();
     //Constructor til SpillePlade (Alt tekst er samlet her)
     public SpillePlade() {
-        tower = new Felt("Tower",250,"Du er landet på Tower og 250 kr. er tilføjet til din konto");
-        crater = new Felt("Crater",-100,"Du er landet på Crater og 100 kr. er trukket fra din konto");
-        palaceGates = new Felt("Palace Gates",100,"Du er landet på Palace Gates og 100 kr. er tilføjet til din konto");
-        coldDesert = new Felt("Cold Desert",-20,"Du er landet på Cold desert og 20 kr. er trukket fra din konto");
-        walledCity = new Felt("Walled City",180,"Du er landet på Walled City og 180 kr. er tilføjet til din konto");
-        monastery = new Felt("Monastery",0,"Du er landet på monastery og ingen penge er tilføjet til din konto");
-        blackCave = new Felt("Black Cave",-70,"Du er landet på Black Cave og 70 kr. er trukket fra din konto");
-        hutsInTheMountain = new Felt("Huts In The Mountain",60,"Du er landet på Huts In The Mountain og 60 kr. er tilføjet til din konto");
-        theWerewall = new Felt("The Werewall",-80,"Du er landet på The Werewall og 80 kr. er tilføjet til din konto, men du får en ekstra tur!");
-        thePit = new Felt("The Pit",-50,"Du er landet på The Pit og 50 kr. er trukket fra din konto");
-        goldMine = new Felt("Goldmine",650,"Du er landet på Goldmine og 650 kr. er tilføjet til din konto");
-        fejlFelt = new Felt("Fejl", 0,"øjenværdien svarer ikke til et felt");
+        tower = new Felt(Tekst.towerTekst[0],250,Tekst.towerTekst[1]);
+        crater = new Felt(Tekst.craterTekst[0],-100,Tekst.craterTekst[1]);
+        palaceGates = new Felt(Tekst.palaceGatesTekst[0],100,Tekst.palaceGatesTekst[1]);
+        coldDesert = new Felt(Tekst.coldDesertTekst[0],-20,Tekst.coldDesertTekst[1]);
+        walledCity = new Felt(Tekst.walledCityTekst[0],180,Tekst.walledCityTekst[1]);
+        monastery = new Felt(Tekst.monasteryTekst[0],0,Tekst.monasteryTekst[1]);
+        blackCave = new Felt(Tekst.blackCaveTekst[0],-70,Tekst.blackCaveTekst[1]);
+        hutsInTheMountain = new Felt(Tekst.hutsInTheMountainTekst[0],60,Tekst.hutsInTheMountainTekst[1]);
+        theWerewall = new Felt(Tekst.theWerewallTekst[0],-80,Tekst.theWerewallTekst[1]);
+        thePit = new Felt(Tekst.thePitTekst[0],-50,Tekst.thePitTekst[1]);
+        goldMine = new Felt(Tekst.goldMineTekst[0],650,Tekst.goldMineTekst[1]);
+        fejlFelt = new Felt(Tekst.fejlFeltTekst[0], 0,Tekst.fejlFeltTekst[1]);
     }
 
     //Method der kalder et felt alt efter øjenværdien af terningen
