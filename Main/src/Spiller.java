@@ -1,6 +1,6 @@
 public class Spiller {
-    private String navn;
-    private Konto Spillerkonto;
+    public String navn;
+    public Konto Spillerkonto;
 
 
 //Constructor til Spiller
