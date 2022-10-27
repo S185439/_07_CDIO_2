@@ -10,6 +10,14 @@ public class Felt {
         outputTekst = _outputTekst;
     }
 
+    // Getter og Setter for navn
+    public void setNavn(String nyTekst) {
+        this.navn = nyTekst;
+    }
+    public String getNavn() {
+        return navn;
+    }
+
     // Getter og Setter for output-teksten
     public void setOutputTekst(String nyTekst) {
         this.outputTekst = nyTekst;
