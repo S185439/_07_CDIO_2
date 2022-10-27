@@ -48,7 +48,7 @@ public class Terning {
 
     /**
      *
-     * @return oejenVardi paa terning som String
+     * @return oejenVaerdi paa terning som String
      */
     @Override
     public String toString() {
