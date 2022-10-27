@@ -8,14 +8,14 @@ class KontoTest {
     @Test
     void plusPenge() {
         konto.setPenge(1000);
-        konto.plusPenge(100);
+        konto.transaktion(100);
         assertEquals(1100, konto.getPenge());
     }
 
     @Test
     void minusPenge() {
         konto.setPenge(1000);
-        konto.minusPenge(100);
+        konto.transaktion(-100);
         assertEquals(900, konto.getPenge());
     }
 
